@@ -1,4 +1,6 @@
 import './burger-ingredients'
+import PropTypes from 'prop-types'
+
 const BurgerIngredient = (props) => {
     let ingerdient = null;
 
@@ -28,6 +30,9 @@ const BurgerIngredient = (props) => {
            ingerdient = null;
     };
 
+}
+const BurgerIngredient.PropTypes = {
+    type: PropTypes.string.isRequired
 }
 
 export default BurgerIngredient

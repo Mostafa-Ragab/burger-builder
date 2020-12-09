@@ -1,9 +1,8 @@
-import "./layout.scss";
-import Aux from "../../hoc/Aux_js";
+import "./layout.css";
 
 const Layout = (props) => (
-	<Aux>
-		<main className="content">{PaymentResponse.children}</main>
-	</Aux>
+	<>
+		<main className="content">{props.children}</main>
+	</>
 );
 export default Layout;

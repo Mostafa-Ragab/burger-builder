@@ -3,7 +3,7 @@ import BurgerIngredient from "./burger-ingredients/burger-ingredients";
 const Burger = (props) => {
 	const tranformedIngredients = Object.keys(props.ingredients)
 		.map((igkey) => {
-			[...Array(props.ingredients[igkey])].map((_, i) => {
+			return [...Array(props.ingredients[igkey])].map((_, i) => {
 				return <BurgerIngredient key={igkey + i} type={igkey} />;
 			});
 		})

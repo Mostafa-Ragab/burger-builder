@@ -1,4 +1,14 @@
 import classes from "./Modal.module.css";
-const Modal = (props) => <div className={classes.Modal}>{props.children}</div>;
+const Modal = (props) => (
+	<div
+		className={classes.Modal}
+		style={{
+			transform: props.show ? "translateY(0)" : "translate(-100vh)",
+			opacity: props.show ? "1" : "0",
+		}}
+	>
+		{props.children}
+	</div>
+);
 
 export default Modal;
